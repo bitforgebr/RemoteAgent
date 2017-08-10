@@ -1,0 +1,22 @@
+@echo off
+mkdir ssh
+pushd ssh
+copy \cygwin64\bin\cygcom_err-2.dll
+copy \cygwin64\bin\cygcrypto-1.0.0.dll
+copy \cygwin64\bin\cyggcc_s-seh-1.dll
+copy \cygwin64\bin\cyggssapi_krb5-2.dll
+copy \cygwin64\bin\cygiconv-2.dll
+copy \cygwin64\bin\cygintl-8.dll
+copy \cygwin64\bin\cygk5crypto-3.dll
+copy \cygwin64\bin\cygkrb5-3.dll
+copy \cygwin64\bin\cygkrb5support-0.dll
+copy \cygwin64\bin\cygssp-0.dll
+copy \cygwin64\bin\cygwin1.dll
+copy \cygwin64\bin\cygz.dll
+copy \cygwin64\bin\rsync.exe
+copy \cygwin64\bin\ssh.exe
+copy \cygwin64\bin\cygpath.exe
+copy \cygwin64\bin\chgrp.exe
+copy \cygwin64\bin\chmod.exe
+popd
+mkdir home

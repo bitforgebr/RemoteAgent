@@ -1,0 +1,6 @@
+Ola. Esta eh a pasta de uploads. 
+Quando for testar um cliente usando a batch criada pelo instalador do server, 
+ele deve criar uma pasta com o nome da maquina dentro desta pasta.
+Ela eh criada para evitar o erro abaixo:
+error in file IO (code 11) at main.c(675) [Receiver=3.1.2]
+Que acontece quando uma pasta-raiz nao existe durante o comando de sincronismo.
