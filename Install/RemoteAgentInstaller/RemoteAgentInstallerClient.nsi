@@ -9,7 +9,7 @@ SetCompressor lzma
 SetCompress off
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "rsyncfiles-client-${PRODUCT_VERSION}.exe"
+OutFile "remoteagent-client-${PRODUCT_VERSION}.exe"
 InstallDir C:\RemoteAgent
 InstallDirRegKey HKLM "Software\RemoteAgent\nsis" "Install_Dir"
 

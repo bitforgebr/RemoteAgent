@@ -42,13 +42,20 @@ Dentro da pasta-raiz há a batch GenerateRemoteAgentClientInstaller.bat que exec
 
 ![](Docs/img/remoteagent-client-installer.png)
 
-As pastas geradas no client refletem as do server, com a rsync e home sendo réplicas. No entanto, uma batch dentro de rsync, ClientCloseKeys, é usada no instalador para configurar a segurança das chaves privadas, apenas possuíndo o usuário ssh_client permissão de abrir as chaves privadas.
+As pastas geradas no client refletem as do server, com a rsync e home sendo réplicas.
 
 ![](Docs/img/remoteagent-client-installer-folders.png)
 
-ATENÇÃO: Será criado nas máquinas-cliente, se ainda não existir, um usuário de nome ssh_client. Essa é a conta que deverá ser usada no teste de sincronismo.
+**ATENÇÃO: O SSH não executa corretamente a não ser que as chaves do cliente estejam fechadas apenas para ele. Essa é uma medida de segurança aplicada by design. Cada conta do cliente deverá fechar sua chave usando os comandos abaixo (em conta elevada):**
 
-Com a instalação cliente concluída, rode um prompt de comando na conta do usuário ssh_client e execute a batch TestClient.bat dentro da pasta rsync.
+```
+ssh\chgrp Users ~/.ssh/id_rsa
+ssh\chmod 600 ~/.ssh/id_rsa
+```
+
+Fonte: https://stackoverflow.com/questions/9270734/ssh-permissions-are-too-open-error
+
+Com a instalação cliente concluída, rode um prompt de comando na conta do usuário ssh_client e execute a batch TestClient.bat dentro da pasta ssh.
 
 ![](Docs/img/remoteagent-client-test.png)
 
