@@ -62,3 +62,11 @@ Com a instalação cliente concluída, rode um prompt de comando na conta do usu
 Após a conclusão da execução, se estiver tudo correto, uma pasta com o nome da máquina-cliente terá sido criada no servidor dentro da pasta uploads, e dentro dela uma cópia do próprio script que foi executado.
 
 ![](Docs/img/remoteagent-server-uploads.png)
+
+Para testar uma sessão remota basta executar o comando ssh.exe em sua forma mais comum:
+
+![](Docs/img/remoteagent-client-ssh.png)
+
+No servidor é possível ver que tanto a sessão quanto os processos criados pela sessão remota pertencem ao usuário especificado:
+
+![](Docs/img/remoteagent-server-ssh-processes.png)
